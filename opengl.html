@@ -1,0 +1,378 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title> opengl </title>
+
+    <style>
+	
+	.centered-image{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		border: 2px solid black;
+
+		/* This sets the name of the animation. MUST be used with @keyframes!! */
+		animation-name: myanimation;
+
+		/* This sets the duration/length(time) of the animation */
+		animation-duration: 0.8s;
+
+		/* Determine how the animation is interpolated */
+		animation-timing-function: linear;
+
+		/* number of times the animation should run */
+		animation-iteration-count: 2;
+
+		/* Determines the final position of the element after animation has finished */
+		animation-fill-mode: forwards;
+
+		position: relative;
+
+	}
+
+	@keyframes myanimation{
+		0% {     opacity: 0; top: 0px; border-radius: 0%;}
+		10%{/*opacity: 0;*/ top: 10px;border-radius: 10%;}
+		20%{/*opacity: 0;*/ top: 20px;border-radius: 20%;}
+		30%{/*opacity: 0;*/ top: 10px;border-radius: 30%;}
+		40%{/*opacity: 0;*/ top:  0px;border-radius: 40%;}
+		50%{/*opacity: 0;*/ top: 10px;border-radius: 50%;}
+		60%{/*opacity: 0;*/ top: 20px;border-radius: 40%;}
+		70%{/*opacity: 0;*/ top: 10px;border-radius: 30%;}
+		80%{/*opacity: 0;*/ top:  0px;border-radius: 20%;}
+		90%{/*opacity: 0;*/ top: 10px;border-radius: 10%;}
+		100%{   opacity: 1; top:  0px;border-radius: 0%;}
+		/*70%{opacity: 50%; top: 10px;}
+		100%{opacity: 100%; top: 0px;}*/
+
+	}
+	
+	body{
+		font-family: arial;
+		line-height: 1.5em;
+		/*background-image: url(images/background.jpg);*/
+		background-color: rgb(50,50,50);
+		margin: 0;
+	}
+
+	h1,h2{
+		text-decoration : underline;
+		text-align : center;
+		color: white;
+	}
+	
+	.center_aligned{
+		text-align: center;
+	}
+
+	.left_aligned{
+		text-align: left;
+	}
+	
+	.right_aligned{
+		text-align: right;
+	}
+	
+    ul{
+        list-style-type: disc;
+        margin: 0 0 0 20px;
+        padding: 30px;
+    }
+	
+	p{
+		color: white;
+	}
+	
+	.para2{
+		margin: auto;
+		width: 60%;
+		text-align: center;
+		background-color: rgb(50,150,200);; 
+		color: rgb(255,255,255);
+		padding: 15px 20px;
+	}
+	
+	a{
+		color: rgb(0,150,200);
+	}
+
+	input[type="submit"]{
+		background-color: rgb(50,150,200);
+		color: rgb(255,255,255);
+		padding: 10px 20px;
+		border: none;
+		margin: 5px;
+		margin-left: 20px;
+		border-radius: 15px;
+	}
+
+	input[type="text"]{
+		margin-left: 20px;
+		background-color: rgb(220,220,220);
+		border-radius: 5px;
+		padding: 3px;
+		border: 0;
+	}
+
+	form textarea{
+		margin-left: 20px;
+		background-color: rgb(220,220,220);
+		border-radius: 15px;
+		border: 0;
+		padding: 10px 10px;
+		overflow-y: hidden;
+	}
+
+    </style>
+
+</head>
+
+<body>
+	<div style = "background-color: rgb(50,50,50); padding-top: 10px; padding-bottom: 50px;margin-top: 0;">
+
+	<img class = "centered-image" src = "images\opengl_logo.png">
+
+	</div>
+
+    <h1 id = "heading" style = "color: rgb(255,255,255); text-decoration: none; background-color: rgb(50,150,200); padding: 50px; width: 30%; margin: auto; margin-bottom: 25px; border-radius: 15px; border: 2px solid white; font-family: times; font-size: 2.5em;line-height: 1.5em;"> Opengl blog </h1>
+	
+    <a href = "#LINKS">  LINKS  </a>
+	<br>
+	<br>
+    <a href = "#reason"> Why I chose the opengl api </a>
+
+    <div style = "background-color: rgb(50,150,200); color: rgb(255,255,255); width: 40%; margin: 15px 20px; padding: 20px 20px; text-align: left; border-radius: 15px;">
+    This blog is to show my progress with opengl !
+
+    <br>
+
+    This game engine or rather rendering engine works with both windows and linux (tested with linux mint 18.2 and 18.3).
+    Have not and most likely will not test for mac compactabilty.
+
+	</div>
+
+
+	<div style = "background-color: rgb(50,150,200); color: rgb(255,255,255); width: 30%; padding-left: 20px; padding-top: 10px; padding-bottom: 20px; margin: 15px 20px; border-radius: 15px;">
+    <h1 class = "left_aligned" style = "color: rgb(255,255,255);" > Specs :</h1>
+
+    <ul>
+       <li>  Processor : Intel celeron N3350 @1.10GHZ </li>
+       <li>  GPU : Intel HD 500 </li>
+       <li>  RAM : 4GB DDR3L </li>
+       <li>  OS : Windows 10 64-Bits </li>
+    </ul>
+	
+	 yeah i know they are shitty specs
+	</div>
+    <br>
+
+    <p style = "color: rgb(0,150,200);"> Windows -></p>
+	<a href = "./images/opengl_game_engine(1).PNG">
+	<img class = "centered-image" src = "./images/opengl_game_engine(1).PNG"> 
+	</a>
+	
+	<p style = "color: rgb(0,150,200);"> Linux -></p> 
+	<a href = "./images/opengl_game_engine(1)linux.PNG">
+	<img class = "centered-image" src = "./images/opengl_game_engine(1)linux.PNG">
+	</a>
+
+	
+	<br>
+
+    <table style = "background-color: silver;">
+        <tr>
+            <th> OS </th> <th> FPS </th>
+        </tr>
+
+        <tr>
+            <td> Windows 10 || </td> <td> 500 ~ 600 </td>
+        </tr>
+
+        <tr>
+            <td> Linux mint &nbsp; ||  </td> <td> 700 ~ 800 </td>
+        </tr>
+
+    </table>
+
+
+	<p> Tutorials I followed : </p>
+
+   <a name = "LINKS"></a> <ul>
+        <li> <a href = "https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2" target = "_blank" > Cherno </a> </li>
+        <li> <a href = "https://www.youtube.com/playlist?list=PLEETnX-uPtBXP_B2yupUKlflXBznWIlL5" target = "_blank" > Bennybox </a> </li>
+    </ul>
+
+    <br>
+
+    <a name = "reason"></a> <h2 class = "para2" style = "padding: 15px 20px;"> Reasons for choosing opengl. </h2>
+    <p class = "para2">
+        I choose Opengl not only because it is cross platform but also because in almost no case have I
+        seen Directx(D3d) 9-11 to be faster. From here on if I do learn another api it will most definitely
+        be the Vulkan api, the successor to opengl, which, ALREADY, has proven itself to be faster in most cases
+        than Directx 12 while still maintaining it's cross platform advantage and better yet it supports windows 7
+        through to windows 10 meanwhile Directx 12 only supports windows 10 (which some people avoid).
+    </p>
+	<br>
+	<p> which is your prefered api ? </p>
+	
+	<form action = "" method = "">
+		<p>
+		Opengl :
+		<input type = "radio" name = "DXorOGL" value = "">
+		<br>
+		Directx :
+		<input type = "radio" name = "DXorOGL" value = "">
+	</p>
+	</form>
+	
+	<br>
+
+		<hr>
+
+	<br>
+
+	<form action = "" method = "">
+
+		<p>
+			<label for = "firstname" style="margin-left: 20px;"> First name: </label><br>
+			<input type = "text" id = "firstname" name = "">
+			<br>
+			<br>
+			<label for = "lastname" style="margin-left: 20px;"> Last name: </label><br>
+			<input type = "text" id = "lastname" name = ""> 
+			<br>
+			<br>
+			<span style="margin-left: 20px;"> Comment :</span>
+			<br>
+			<textarea rows = "10" cols = "60" style = "margin-top: 0;"></textarea>
+			<br>
+			<input type = "submit" value = "submit" onclick = " this.innerHTML = 'you clicked!!' " >
+		</p>
+		
+	</form>
+
+	<button onclick = "change_text()">
+		CLICK ME!!
+	</button>
+
+	
+	
+	<div style = "margin-top: 200px;"></div>
+
+	<script type="text/javascript">
+		/*var colors = ["red", "green", "blue"];
+
+		colors.push("alpha");
+
+		alert(colors);*/
+
+		/*for (var i = 0; i < 10; i++) {
+			console.log(i);
+		}
+
+		var numbers = [1,2,3,4,5,6];
+
+		numbers.forEach(function(number){
+			console.log(number);
+		});*/
+
+		/*var num1 = 1;
+		var num2 = 2;
+
+		if(num1 == num2){
+			console.log("This is true");
+		}else{
+			console.log("This is false");
+		}*/
+
+		/*var number = 2;
+
+		switch(number){
+			case 1:
+				console.log("I love 1.");
+			break;
+
+			case 2:
+				console.log("I love 2.");
+			break;
+
+			default:
+				console.log("I hate all other numbers.");
+			break;
+		}*/
+
+		//object literal
+
+		/*var person = {
+			firstname: "kyle",
+			lastname: "belle",
+			age: 30,
+
+			address: {
+				country: "america",
+				state: "new york",
+				street: "some street"
+			},
+
+			fullname: function(){
+				return this.firstname + " " + this.lastname;
+			}
+		}
+
+		console.log(person.fullname());*/
+
+		//object constructor
+
+		/*var apple = new Object();
+
+		apple.color = "red";
+		apple.shape = "round";
+
+		apple.describe = function(){
+			return "An apple is the colour " + this.color + " and is the shape " + this.shape + ".";
+		}
+
+		console.log(apple.describe());*/
+
+		//constructor pattern
+
+		/*function fruit(name, color, shape){
+			this.name = name;
+			this.color = color;
+			this.shape = shape;
+
+			this.describe = function(){
+				return "A " + this.name + " is the colour " + this.color + " and is the shape " + this.shape + ".";
+			}
+
+		}
+
+		var apple = new fruit("apple", "red", "round");
+
+		var melon = new fruit("melon", "green", "round");
+
+		console.log(apple.describe());
+		console.log(melon.describe());*/
+
+		function doclick(){
+			alert("you clicked the button!!!");
+		}
+
+		function change_text(){
+			var heading = document.getElementById("heading");
+
+			heading.innerHTML = "____Opengl blog____";
+		}
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>
